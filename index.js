@@ -8,7 +8,7 @@ app.set("view engine","ejs");
 app.use(express.static("views"));
 
 app.use(morgan("dev"));
-
+// testing push effect
 app.get("/",(req,res)=>{
     res.render("index");
 })
