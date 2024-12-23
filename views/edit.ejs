@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("inc/head") %> 
+<body class="bg-dark">
+   
+<!-- header -->
+
+<div class="container bg-light" style="padding:0px">
+  <%- include("inc/header") %>
+   <br /><br />
+   <div class="container">
+<h2>Edit Post</h2> 
+<!-- <p>Please kindly go through the form to update the content you wish to adjust.</p> -->
+
+<div class="alert alert-info"><%= message %></div>
+
+<form method="post" action="/edit/<%= data.id %>"> 
+  Post Title
+  <input type="text" name="title" class="form-control" value=" <%= data.title %>" /><br >
+  Post Author
+  <input type="text" name="author" class="form-control"  value=" <%= data.author %>"/><br >
+  Post Body
+  <textarea name="body" id="" class="form-control"><%= data.body %></textarea><br />
+  <button class="btn btn-dark" style="border-radius: 1px;">Update Post</button>
+ 
+</form>
+<br /><br /><br />
+   </div>
+   </div>
+   <br />
+
+   <!-- footer -->
+   <%- include("inc/footer") %>
+</body>
+</html>

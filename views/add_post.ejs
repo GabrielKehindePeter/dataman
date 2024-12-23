@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("inc/head") %> 
+<body class="bg-dark">
+   
+<!-- header -->
+
+<div class="container bg-light" style="padding:0px">
+  <%- include("inc/header") %>
+   <br /><br />
+   <div class="container">
+<h2>Add A New Post</h2> 
+<form method="post" action="/process-post">
+  Post Title
+  <input type="text" name="title" class="form-control" /><br >
+  Post Author
+  <input type="text" name="author" class="form-control" /><br >
+  Post Body
+  <textarea name="body" id="" class="form-control"></textarea><br />
+  <button class="btn btn-dark" style="border-radius: 1px;">Submit Post</button>
+</form>
+<br /><br /><br />
+   </div>
+   </div>
+   <br />
+
+   <!-- footer -->
+   <%- include("inc/footer") %>
+</body>
+</html>

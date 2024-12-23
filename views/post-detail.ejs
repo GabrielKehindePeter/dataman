@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("inc/head") %> 
+<body class="bg-dark">
+   
+<!-- header -->
+
+<div class="container bg-light" style="padding:0px">
+  <%- include("inc/header") %>
+   <br /><br />
+<div class="container-fluid mt-6 pt-6">
+    <div class="row">
+        <div class="col-lg-9"> 
+            <% data.forEach((blog) => { %>
+                <div style="background-color: rgb(235, 235, 235); padding: 15px;border-radius:2px">
+                <h3 class="text-danger"><%= blog.title %></h3>    
+                <div align="justify"><%= blog.body %></div> <br />
+                <div class="text-danger" style="font-size: small;">By <%= blog.author %></div> 
+                <!-- <div style="font-size: xx-small;">Posted <%= blog.upload_date %></div>  -->
+                <a href="/"><button class="btn btn-light">Back</button></a>
+                </div><br />
+              <% }); %>
+              
+             
+        </div>
+        <div class="col-lg-3">
+            <!-- div 2 -->
+             <img src="img/thumb-1.jpg" width="100%" alt="">
+             <br /><br />
+             <h2>Recent Post<hr /></h2>
+            <% data.forEach((blog) => { %>
+                <h5 class="text-info"><a href="#"><%= blog.title %></a></h5> 
+            <% }); %>
+        </div>
+    </div>
+</div>
+
+</div>
+
+<!-- footer -->
+<%- include("inc/footer") %>
+</html>
